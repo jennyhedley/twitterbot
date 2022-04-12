@@ -609,7 +609,7 @@ const grammar = tracery.createGrammar({
     "body adornment",
     "childbirth customs",
     "childcare",
-    "childhood fears",
+    "childhood fantasies",
     "choice making",
     "classification",
     "classification of age",
