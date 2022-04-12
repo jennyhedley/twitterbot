@@ -628,7 +628,6 @@ const grammar = tracery.createGrammar({
     "mediation of conflict",
     "conjectural reasoning",
     "containers",
-
     "meaningful elements in language",
     "cooking",
     "cooperation",
