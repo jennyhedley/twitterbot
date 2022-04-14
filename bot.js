@@ -9,7 +9,7 @@ const T = new Twit(config);
 const getTweet = require("./tweets");
 
 tweetIt();
-setInterval(tweetIt, 1000 * 7200);
+setInterval(tweetIt, 1000 * 30);
 
 function tweetIt() {
   const tweet = {
