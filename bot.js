@@ -2,7 +2,6 @@ console.log("Anne bot is starting");
 
 const express = require("express");
 const app = express();
-
 app.set("port", process.env.PORT || 5000);
 
 //For avoiding Heroku $PORT error
@@ -25,15 +24,13 @@ const config = require("./config");
 const T = new Twit(config);
 const getTweet = require("./tweets");
 
-/*
-// Tweet every day at 5am 10am and 5pm
-cron.schedule("0 5,10,17 * * *", () => {
+// Tweet every day at 9am 12n and 5pm locally GMT 2,7,23
+cron.schedule("0 2,7,23 * * *", () => {
   tweetIt();
 });
-*/
 
-tweetIt();
-setInterval(tweetIt, 1000 * 60 * 60 * 6);
+// tweetIt();
+// setInterval(tweetIt, 1000 * 60 * 60 * 6);
 
 function tweetIt() {
   const tweet = {
