@@ -5,6 +5,7 @@ const app = express();
 
 app.set("port", process.env.PORT || 5000);
 
+/*
 //For avoiding Heroku $PORT error
 app
   .get("/", function (request, response) {
@@ -17,6 +18,7 @@ app
       app.get("port")
     );
   });
+  */
 
 require("dotenv").config();
 const cron = require("node-cron");
@@ -25,13 +27,15 @@ const config = require("./config");
 const T = new Twit(config);
 const getTweet = require("./tweets");
 
+/*
 // Tweet every day at 5am 10am and 5pm
 cron.schedule("0 5,10,17 * * *", () => {
   tweetIt();
 });
+*/
 
-// tweetIt();
-// setInterval(tweetIt, 1000 * 60 * 60 * 6);
+tweetIt();
+setInterval(tweetIt, 1000 * 60 * 60 * 6);
 
 function tweetIt() {
   const tweet = {
