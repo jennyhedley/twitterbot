@@ -17,6 +17,15 @@ app
     );
   });
 
+//prevent idle with 20 minute ping - haven't tested
+// using http://kaffeine.herokuapp.com/ with 16:45 GMT bedtime
+// const http = require("http");
+// setInterval(function() {
+//     http.get("http://annebotwallace.herokuapp.com");
+// }, 1000 * 60 * 20); // every 20 minutes
+
+
+
 require("dotenv").config();
 const cron = require("node-cron");
 const Twit = require("twit");
