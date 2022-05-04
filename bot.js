@@ -24,8 +24,6 @@ app
 //     http.get("http://annebotwallace.herokuapp.com");
 // }, 1000 * 60 * 20); // every 20 minutes
 
-
-
 require("dotenv").config();
 const cron = require("node-cron");
 const Twit = require("twit");
@@ -33,8 +31,8 @@ const config = require("./config");
 const T = new Twit(config);
 const getTweet = require("./tweets");
 
-// Tweet every day at 9am 12n and 5pm locally GMT 2,7,23
-cron.schedule("0 2,7,23 * * *", () => {
+// Tweet every day locally GMT 2=12n,7=5pm,23=9am
+cron.schedule("0 7,23 * * *", () => {
   tweetIt();
 });
 
