@@ -32,12 +32,12 @@ const T = new Twit(config);
 const getTweet = require("./tweets");
 
 // Tweet every day locally GMT 2=12n,7=5pm,23=9am
-//cron.schedule("0 7,23 * * *", () => {
-// tweetIt();
-// });
-
+cron.schedule("0 6,22 * * *", () => {
 tweetIt();
-setInterval(tweetIt, 1000 * 60 * 60 * 6);
+});
+
+//tweetIt();
+//setInterval(tweetIt, 1000 * 60 * 60 * 6);
 
 function tweetIt() {
   const tweet = {
